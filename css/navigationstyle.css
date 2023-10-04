@@ -1,0 +1,237 @@
+@import url('css\navigationstyle.css');
+:root
+{
+    --darkgray:#212329;
+    --brightred:#f9423D;
+    --white:#FFF;
+    --lightred:#f9433dcc;
+    --black:#000000;
+    --lightblue:#337af1;
+}
+
+/*For Whole Page
+---------------------------------------*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+/*End Of Styling for Whole Page
+---------------------------------------*/
+
+.main
+{
+    background: fixed linear-gradient(rgba(0,0,0,0.68),rgba(0,0,0,0.68),rgba(0,0,0,0.68),rgba(0,0,0,0));
+    background-size: cover;
+    background-color: var(--darkgray);
+}
+
+
+/*Styling for navigation Bar*/
+.nav-container
+{
+    width: 100%;
+    background-color: fixed linear-gradient(rgba(0,0,0,0.68),rgba(0,0,0,0.68),rgba(0,0,0,0.68),rgba(0,0,0,0));;
+}
+
+.navbar
+{
+    display: grid;
+    grid-template-columns: 0.2fr auto 1fr;
+    align-items: center;
+    height: 80px;
+    width: 90%;
+    max-width: 1720px;
+    margin: 0 auto;
+}
+
+b
+{
+    color: var(--brightred);
+    border-bottom: 2px solid var(--brightred);
+    font-weight: normal;
+}
+
+/*Styling For Logo
+----------------------------------------*/
+#navbar-logo
+{
+    color: var(--brightred);
+    justify-self: start;
+    margin-left: 20px;
+    z-index: 999;
+    text-decoration: none;
+}
+
+#navbar-logo
+{
+    cursor: pointer;
+}
+/*End of Styling For Logo
+---------------------------------------*/
+
+
+.nav-menu
+{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    list-style: none;
+    text-align: center;
+    width: 70%;
+    justify-self: end;
+}
+
+.nav-links
+{
+    color: var(--white);
+    text-decoration: none;
+}
+
+.nav-links:hover
+{
+    color: var(--brightred);
+    transition: all 0.2s ease-out;
+}
+
+
+/*For Button in navigation bar
+---------------------------------------*/
+.nav-links-btn
+{
+    background-color: var(--brightred);
+    padding: 6px 16px;
+    border-radius: 4px;
+}
+.nav-links-btn:hover
+{
+    background-color: transparent;
+    color: var(--white);
+    padding: 5px 15px;
+    border-radius: 4px;
+    border: solid 1px var(--brightred);
+    transition: all 0.3s ease-out;
+}
+/*End Of Styling For Button
+-------------------------------------*/
+
+
+.menu-toggle .bar
+{
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: var(--white);
+}
+
+@media screen and (max-width: 768px) {
+    .nav-container
+    {
+        position: relative;
+    }
+
+    .nav-menu
+    {
+        display: grid;
+        grid-template-columns: auto;
+        background: var(--brightred);
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: -100%;
+        opacity: 0;
+        transition: all 0.5s ease;
+        z-index: 998;
+    }
+
+    #navbar-logo
+    {
+        margin-left: 20px;
+        z-index: 1000;
+    }
+
+    .nav-menu.active
+    {
+        background: var(--black);
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+
+    .nav-links
+    {
+        text-align: center;
+        line-height: 60px;
+        width: 100%;
+        display: table;
+    }
+
+    .nav-links:hover
+    {
+        background-color: var(--brightred); 
+        color: var(--white);
+        transition: all 0.4s ease-out;
+        
+    }
+
+    .navbar{
+        width: 100%;
+    }
+
+    .nav-links-btn
+    {
+        border: none;
+        padding: 0;
+        border-radius: 0;
+        background-color: var(--darkgray);
+        color: var(--white);
+        transition: all 0.4s ease-out;
+    }
+
+    .nav-links-btn:hover
+    {
+        border: none;
+        padding: 0;
+        border-radius: 0;
+        background-color: var(--brightred);
+        color: var(--white);
+        transition: all 0.4s ease-out;
+    }
+    
+
+    #mobile-menu
+    {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%)       
+    }
+
+    .menu-toggle .bar
+    {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-toggle:hover
+    {
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2)
+    {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1)
+    {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3)
+    {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}

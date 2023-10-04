@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="images/icon.ico" type="image/x-icon">
+        <title>Vir Die Wolwe</title>
+        <link rel="stylesheet" href="css/navigationstyle.css">
+        <link rel="stylesheet" href="css/Albums.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=kulim+Park&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Great+Vibes|Mountains+of+christmas|Shadows+Intro+Light&display=swap">
+        <link rel="stylesheet" href="https://stackpath.boostrapcdn.com/font-awsome/4.7.8/css/font-awesome.min.css" integrity="sha384-wvfXpqZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkpCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hanalei|Indie+Flower|Orbitron|Righteous&display=swap">
+    </head>
+
+    <!-- Navigation Section  -->
+    <body class="main">
+        <div class="nav-container">
+            <nav class="navbar">
+                <h1 id="navbar-logo">HERBAL</br> &nbsp;GUCCI</h1>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-links">Home</a></li>
+                    <li><a href="songs.html" class="nav-links">Songs</a></li>
+                    <li><a href="gallery.html" class="nav-links">Gallery</a></li>
+                    <li><a href="albums.html" class="nav-links"><b>Albums</b></a></li>
+                    <li><a href="contact.html" class="nav-links">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Body Section -->
+        <div class="body_main">
+            <!-- top section -->
+            <div class="top_section">
+                <button class="main-btn"><a href="albums.html" >Back</a></button>
+                <h5>Vir Die Wolwe</h5>
+            </div>
+        
+        
+          <div class="tracks">
+            
+            <!-- list of song will add here from 'song_list.js' file -->
+        
+            <!-- small music player -->
+            <div class="small_music_player">
+                <div class="s_player_img">
+                    <div class="playing_img">
+                        <img src="images/Vir DIe Wolwe thumbnail.jpg" alt="">
+                    </div>
+                
+                   <!-- wave animation part -->
+                   <div class="wave_animation">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                   </div>
+                </div>
+        
+                <div class="song_detail">
+                    <p id="song_name">FOute</p>
+                    <p id="artist_name">NoCopyrightSounds [NCS]</p>
+                </div>
+                <i class="fa fa-chevron-up" aria-hidden="true" id="up_player"></i>
+            </div>
+        
+        
+            <!--  popup music player part -->
+            <div class="popup_music_player">
+                <div class="top">
+                    <p>Now Playing</p>
+                    <i class="fa fa-chevron-down" aria-hidden="true" id="down_player"></i>
+                </div>
+                
+               <div class="song_img">
+                    <img src="images/Vir DIe Wolwe thumbnail.jpg" alt="">
+               </div>
+        
+               <div class="song_description">
+                    <h3 id="current_track_name">Foute</h3>
+                    <p id="current_singer_name">NoCopyrightSounds [NCS]</p>
+               </div>
+        
+               <div class="controlls">
+                 <div class="progress_part">
+                    <input type="range" min="0" max="100" value="0" id="slider" onchange="change_duration()">
+                    <div class="durations">
+                        <p id="current_duration">0:00</p>
+                        <p id="total_duration">0:00</p>
+                    </div>        
+               </div>
+                    
+                <!-- controlls btn's -->
+                <div class="controlls_btns">
+                    <button id="backward_btn"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+                    <button id="play_pause_btn"><i class="fa fa-play" aria-hidden="true"></i></button>
+                    <button id="forward_btn"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+                </div>
+              </div>
+            </div>
+        </div>
+        
+        
+        <!-- song list file -->
+        <script src="scripts/song_list.js"></script>
+        <!-- javascript -->
+        <script src="scripts/songs_main.js"></script>
+
+        <script src="scripts/navigationscript.js"></script>
+    </body>
+</html>
